@@ -8,37 +8,47 @@
   </head>
   
   <body>
-    <fieldset>
-
-      <h1  style="color: red">Cadastro Simples</h1>
+    <fieldset style="background-color:#EDFDFF">
+      <h2  style="color:#507A80">Cadastro Simples</h2>
       <form>
         <p>
-          <label for="user-input"><b>Nome</b></label>
-          <input type="text" id="user-input" name="name" />
-          
+          <label for="user-input"><b>Apelido</b></label><br />
+          <input type="text" id="user-input" name="input" />
         </p>
-        <label for="user-input"><b>Email</b></label>
-        <input type="text" id="user-input_email" name="name" />
         <p>
-        <b>Sexo:  </b>
+          <label for="user-input-email"><b>Email</b></label><br />
+          <input type="text" id="user-input-email" name="input-email" />
+        </p>
+        <p>
+        <b>Sexo:  </b><br />
+          <input type="radio" id="user-radio" name="radio" />
           <label for="user-radio">Masc</label>
-          <input type="radio" id="user-radio" name="name" />
-          <label for="user-radio">Fem</label>
-          <input type="radio" id="user-radio2" name="name" />
-          <label for="user-radio">Outro</label>
-          <input type="radio" id="user-radio3" name="name" />
+         
+          <input type="radio" id="user-radio2" name="radio" /> 
+          <label for="user-radio2">Fem</label>
           
+          <input type="radio" id="user-radio3" name="radio" />
+          <label for="user-radio3">Outro</label>
         </p>
         <p>
-          <label for="user-input">Enviar</label>
-          <input type="submit" id="user-check" name="name" value="Concluido" />
-          
+          <label for="user-date"><b>Data de nascimento</b></label><br />
+          <input type="date" id="user-date" name="date" />
         </p>
-        
+          <label for="user-range"><b>Sua fome no momento</b></label>
+          <font size="-1"><i> (Sim, isso é importante!)</i></font><br />
+          Pouca<input type="range" min="-10" max="10" id="user-range" name="range"/>Muita
+         <p>
+          <label for="user-input_password"><b>Senha</b></label><br />
+          <i>A senha precisa de uma letra maiuscula e um numero.</i><br />
+          <input type="password" id="user-input_password" name="passowrd" />
+        </p>
+        <p>
+          Finalizou?
+          <input type="submit" id="user-button-submit" name="submit" value="Concluido" /><br />
+          Precisa limpar os campos?
+          <input type="reset" value="Limpar">
+        </p>
       </form>
-    
     </fieldset> 
-
   </body>
-
 </html>
