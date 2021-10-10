@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Video</title>
+
+    <style>
+        body{
+            text-align: center;
+            background: #1f6032;
+        }
+
+        header{
+            margin-left: 125px;
+            width: 700px;
+            padding: 20px;
+            background: #032202;
+            color: white;
+            border-radius: 45px;
+        }
+
+        #div-audio{
+            color: #032202;    
+            margin-left: 150px;
+            background: #369457;
+            width: 700px;
+            height: auto;
+            border-radius: 45px;
+        }
+
+        #div-video{
+            color: #032202;
+            margin-left: 150px;
+            border-radius: 45px;
+            width: 700px;
+            background: #29773e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Teste das Tags Audio e Video HTML5</h1>
+    </header>
+    <main>
+        <div id="div-audio">
+            <h2>O Classico da Groovada em audio que é para sentir na alma!</h2>
+            <audio controls>
+                <source src="midia/classico.mp3" type="audio/mpeg">
+                O seu navegador não suporta o elemento :/
+            </audio>
+        </div>
+        <div id="div-video">
+            <h2>A melhor cena da melhor serie de todos os tempos!</h2>
+            <video controls>
+                <source src="midia/the-one.mp4" type="video/mp4">
+                O seu navegador não suporta o elementeo :/
+            </video>
+
+        </div>
+
+    </main>
+</body>
+</html>
