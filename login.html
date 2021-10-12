@@ -8,80 +8,92 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;1,900&display=swap" rel="stylesheet">
     <title>Cadastro</title>
     <style>
+      body{
+        background-image: linear-gradient(25deg, rgb(0, 9, 128), rgb(11, 44, 192));
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
       .container{
-        margin: auto;
-        width: 50%;
-        padding: 10px;
-        margin-top: 10%;
+        margin: 0 auto;
+        margin-top: 75px;
+        width: 350px;
       }
 
       .form-login{
         width: 300px;
+        height: 350px;
         background: rgb(0, 1, 44);
         text-align: center;
-        padding: 20px;
-        border: 3px solid white;
-        border-radius: 10%;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: rgb(17 57 132) 4px 6px 5px 2px;
       }
 
       #logo-login{
-        margin: 20px;
+        margin: 25px;
+        margin-top: 10px;
+        width: 60px;
       }
 
       .form-icon{
+        margin-right: 10px;
         margin-top: 5px;
         width: 22px;
+        height: 18px;
+      }
+
+      .custom-input{
+        width: 295px;
+        height: 30px;
+        padding: 5px;
+        background: rgba(9, 1, 78, 0.993);
+        border-radius: 60px;
+        margin-bottom: 10px;
       }
 
       input{
         background: none;
         border: 0px;
         font-size: 18px;
-        margin-left: 10px;
+        color: white;
+      }
+      input:focus{
+        outline: 0px;
+      }
+
+      #check-label, #forgot-label{
+        color:white;
+        margin: 15px;
+        cursor:pointer;
+      }
+
+      .custom-btn-sign-up, .custom-btn{
+        font-weight: bold;
+        margin: 0 auto;
+        margin-top: 15px;
+        width: 200px;
+        height: 35px;
+        background-color: rgb(83 176 75);
+        border-radius: 50px;
+        cursor:pointer;
+      }
+      .custom-btn-sign-up:hover, .custom-btn:hover{
+        background-color: yellowgreen;
+      }
+
+      #form-btn-sign-up, #form-btn{
+        margin-top: 5px;
+        cursor:pointer;
+      }
+
+      ::placeholder{
         color: white;
       }
 
-      .custom-input{
-        padding: 3px;
-        background: rgba(9, 1, 78, 0.993);
-        border-radius: 60px;
-        margin: 5px;
+      #caixinha{
+        margin-top: 30px;
       }
-
-      .custom-btn{
-        margin: 10px;
-      }
-
-      #custom-checkbox{
-        margin-left: 20px;
-      }
-
-      #forgot-label{
-        margin: 20px;
-      }
-
-      #form-btn{
-        margin: auto;
-        padding: 20px;
-        padding-right: 70px;
-        background: rgb(1, 1, 109);
-        width: 30px;
-        border-radius: 45px;
-      }
-
-      #form-btn-sign-up{
-        margin: auto;
-        padding: 20px;
-        padding-right: 70px;
-        background: rgb(1, 1, 109);
-        width: 30px;
-        border-radius: 45px;
-        
-      }
-
-
-
-
 
     </style>
   </head>
@@ -97,15 +109,17 @@
           <img src="./assets/pass.svg" class="form-icon"/>
           <input type="password" name="username" placeholder="Password"/>
         </div>
-
         <input type="checkbox" id="custom-checkbox" /> 
         <label id="check-label" for="custom-checkbox">Remember me</label>
         <label id="forgot-label">Forgot password?</label><br />
-        <div class="custom-btn">
-        <input type="submit" value="Login" id="form-btn">
-        <input type="submit" value="Sign Up" id="form-btn-sign-up">
+        <div id="caixinha">
+          <div class="custom-btn">
+            <input type="submit" value="Login" id="form-btn">
+          </div>
+          <div class="custom-btn-sign-up">
+            <input type="submit" value="Sign Up" id="form-btn-sign-up">
+          </div>
         </div>
-
       </form>
     </div>
 
