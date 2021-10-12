@@ -9,42 +9,58 @@
     <style>
         body{
             text-align: center;
-            background: #1f6032;
+        }
+
+        #container{
+            margin: 0 auto;
+            width: 570px;
+            padding: 5px;
+            background: #A4A5A7;
+            border-radius: 45px;
         }
 
         header{
-            margin-left: 125px;
-            width: 700px;
-            padding: 20px;
-            background: #032202;
-            color: white;
+            margin: 0 auto;
+            margin-top: 20px;
+            width: 550px;
+            padding: 10px;
+            background: #E39F9F;
+            color: #ffffff;
             border-radius: 45px;
         }
 
         #div-audio{
-            color: #032202;    
-            margin-left: 150px;
-            background: #369457;
-            width: 700px;
+            margin: 0 auto;;
+            margin-top: 20px;
+            color: #dddddd;
+            background: #5E5E5E;
+            width: 550px;
+            padding: 10px;
             height: auto;
             border-radius: 45px;
         }
 
         #div-video{
-            color: #032202;
-            margin-left: 150px;
+            margin: 0 auto;;
+            margin-top: 20px;
+            color: #dddddd;
+            background: #5E5E5E;
+            width: 550px;
+            padding: 10px;
+            height: auto;
             border-radius: 45px;
-            width: 700px;
-            background: #29773e;
         }
+
+
     </style>
 </head>
 <body>
-    <header>
-        <h1>Teste das Tags Audio e Video HTML5</h1>
-    </header>
+    <div id="container">
+        <header>
+            <h1>Teste das Tags Audio e Video HTML5</h1>
+        </header>
         <div id="div-audio">
-            <h2>O Classico da Groovada em audio que é para sentir na alma!</h2>
+            <h2>Um Classico da Groovada em audio!</h2>
             <audio controls>
                 <source src="midia/classico.mp3" type="audio/mpeg">
                 O seu navegador não suporta o elemento :/
@@ -52,13 +68,11 @@
         </div>
         <div id="div-video">
             <h2>A melhor cena da melhor serie de todos os tempos!</h2>
-            <video controls>
-                <source src="midia/the-one.mp4" type="video/mp4">
+            <video width="320" height="200" controls>
+                <source src="midia/the-one.mp4" type="video/mp4" id="video">
                 O seu navegador não suporta o elementeo :/
             </video>
-
         </div>
-
-    </main>
+    </div>
 </body>
 </html>
