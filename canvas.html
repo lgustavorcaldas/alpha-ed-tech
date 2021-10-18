@@ -10,25 +10,39 @@
             background-color: #918080;
         }
         body{
-            width: 100px;
-            height: 100px;
+            width: 100%;
+            height: 100%;
             overflow: hidden;
         }
     </style>
 
 </head>
 <body>
-    <canvas id="sandbox">
-        Your browser does not support the HTML5 canvas tag :c
-    </canvas>
-    
+    <div>
+        <label>Width</label>
+        <input type="range" id="caWidth" min="108" max="1080" value="960" />
+        <label>Height</label>
+        <input type="range" id="caHeight" min="108" max="1080" value="960" /><br />
+
+        <canvas id="sandbox">
+            Your browser does not support the HTML5 canvas tag :c
+        </canvas>
+    </div>  
+
     <script>
-        const canvas= document.getElementById('sandbox');
-        canvas.width = window.innerWidth/3;
-        canvas.height = window.innerHeight/2;
+        const canvas= document.getElementById('sandbox')
 
         const ctx = canvas.getContext('2d');
-        
+
+
+        function changeSize(){
+            let caWidth1 = document.getElementById('caWidth').value;
+            let caHeight1 = document.getElementById('caHeight').value;
+
+            canvas.width = caWidth1;
+            canvas.height = caHeight1;
+        }
+
         function Circle (x, y, r, c) {
             this.x = x;
             this.y = y;
@@ -67,7 +81,7 @@
         }
 
         const balls = [];
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < 0; i++) {
             let r = Math.floor(Math.random() * 30) + 15;
             let x = Math.random() * (canvas.width - (r * 2)) + r;
             let y = Math.random() * (canvas.height - (r * 2)) + r;
@@ -90,6 +104,10 @@
         }
 
         Update();
+
+        document.getElementById('caWidth').addEventListener('input',changeSize);
+        document.getElementById('caHeight').addEventListener('input',changeSize);
+
     </script>
 </body>
 </html>
