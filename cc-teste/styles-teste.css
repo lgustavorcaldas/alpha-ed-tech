@@ -5,6 +5,9 @@
     --bg-primary: #23232e;
     --bg-secondary: #141418;
 }
+.corpo{
+    text-indent: 30px;
+}
 body{
     color: black;
     background-color: white;
