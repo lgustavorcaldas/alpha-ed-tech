@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolas e + bolas</title>
+    <style>
+        canvas{
+            background-color: #918080;
+        }
+        body{
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+<body>
+    <canvas id="sandbox">
+        Your browser does not support the HTML5 canvas tag :c
+    </canvas>
+    
+    <script>
+        const canvas= document.getElementById('sandbox');
+        canvas.width = window.innerWidth/3;
+        canvas.height = window.innerHeight/2;
+
+        const ctx = canvas.getContext('2d');
+        
+        function Circle (x, y, r, c) {
+            this.x = x;
+            this.y = y;
+            this.r = r;
+            this.c = c;
+
+            this.dx = (Math.random()* 16) + 1;
+            this.dx *= Math.floor(Math.random() * 2) == 1 ? 1 : -1;
+            this.dy = (Math.random()* 16) + 1;
+            this.dy *= Math.floor(Math.random() * 2) == 1 ? 1 : -1;
+
+
+            this.draw = function () {
+                ctx.beginPath();
+                ctx.fillStyle = this.c;
+                ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            this.animate = function() {
+                this.x += this.dx;
+                this.y += this.dy;
+
+                if(this.x + this.r > canvas.width || this.x - this.r < 0) {
+                    this.dx = -this.dx; 
+                    this.c = '#8AFF00'
+                }
+
+                if(this.y + this.r > canvas.height || this.y - this.r < 0) {
+                    this.dy = -this.dy;
+                    this.c = '#42124C'
+
+                }
+                this.draw();
+            }
+        }
+
+        const balls = [];
+        for (let i = 0; i < 15; i++) {
+            let r = Math.floor(Math.random() * 30) + 15;
+            let x = Math.random() * (canvas.width - (r * 2)) + r;
+            let y = Math.random() * (canvas.height - (r * 2)) + r;
+            let c = '#42124C'
+            balls.push(new Circle(x, y, r, c));
+        }
+
+        canvas.addEventListener('click', function (e){
+            let r = Math.floor(Math.random() * 30) + 15;
+            balls.push(new Circle(e.clientX, e.clientY, r, '#FE0472'));
+            }); 
+
+        function Update (){
+            ctx.clearRect(0,0, canvas.width, canvas.height);
+            for (let i = 0; i < balls.length; i++) {
+                balls[i].animate();
+            }
+
+            requestAnimationFrame(Update);
+        }
+
+        Update();
+    </script>
+</body>
+</html>

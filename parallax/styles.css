@@ -1,0 +1,47 @@
+:root{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    --text-primary: #ffffff;
+    --text-secondary: #000000;
+    --bg-primary: #000749;
+    --bg-secondary: #141418;
+}
+body{
+    color: black;
+    background-color: #000749;
+    margin: 0;
+    padding: 0;
+}
+.parallax {
+    background-image: url("midia/top.jpg") ;
+    min-height: 500px;  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body::-webkit-scrollbar{
+    width: 0.25rem;
+}
+body::-webkit-scrollbar-track{
+    background: #000749;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgb(110, 255, 118);
+}
+.bloco{
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+div{
+    margin: 0;
+    padding: 0;
+}
+.segundo {
+    background-image: url("midia/segundo.jpg") ;
+    min-height: 500px;  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
