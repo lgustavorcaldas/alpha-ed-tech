@@ -271,6 +271,13 @@ body{
             height: 100px;
             justify-content: space-around;
         }
+            .page-five-left ul il a:visited{
+                color: white;
+            }
+    .page-five-left a{
+        height: 20px;
+        width: 40px;
+    }
     .page-five-left p{
         width: 180px;
     }
@@ -283,24 +290,33 @@ body{
             display: flex;
             column-gap: 15px;
             align-items: center;
+            color: white;
         }
-            #email-box{
+            .email div{
+                display: flex;
                 width: 350px;
                 height: 38px;
                 background-color: #ffffff00;
                 border: 2px solid white;
                 color: white;
             }
-                #email-box::placeholder{
-                    width: 225px;
-                    text-align: center;
+                #email-box{
+                    background-color: rgba(255, 255, 255, 0);
+                    border: none;
+                    width: 350px;
                     color: white;
-                    font-size: 16px;
+
                 }
-                #email-box:hover{
-                    border-radius: 0px;
-                    box-shadow: inset 0px 0px 0px 3px white;
-                }
+                    #email-box::placeholder{
+                        width: 225px;
+                        color: white;
+                        font-size: 16px;
+                    }
+                    .email div:hover{
+                        z-index: 1;
+                        border-radius: 0px;
+                        box-shadow: inset 0px 0px 0px 3px white;
+                    }
             .email p{
                 border: 2px solid white;
                 height: 20px;
@@ -319,3 +335,6 @@ body{
             width: 500px;
             justify-content: space-between;
         }
+            .contact svg:hover{
+                cursor: pointer;                
+            }
