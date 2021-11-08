@@ -309,9 +309,9 @@ body{
                 #email-box{
                     background-color: rgba(255, 255, 255, 0);
                     border: none;
-                    width: 350px;
+                    width: 300px;
+                    padding-left: 50px;
                     color: white;
-
                 }
                     #email-box::placeholder{
                         width: 225px;
@@ -319,9 +319,13 @@ body{
                         font-size: 16px;
                     }
                     .email div:hover{
-                        z-index: 1;
                         border-radius: 0px;
                         box-shadow: inset 0px 0px 0px 3px white;
+                    }
+                    .email div input:focus{
+                        border-radius: 0px;
+                        box-shadow: 0;
+                        outline-width: 0px;
                     }
             .email p{
                 border: 2px solid white;
@@ -334,6 +338,7 @@ body{
                     color: black;
                     transition: 0.5s;
                 }
+                
         .contact{
             padding: 30px 0 0 0;            
             display: flex;
@@ -344,3 +349,4 @@ body{
             .contact svg:hover{
                 cursor: pointer;                
             }
+            
