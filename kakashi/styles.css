@@ -14,9 +14,9 @@ body{
     text-align: center;
     width: 100vw;
 }
-    .top{
+    .page-one-bg{
     }
-        .teste{
+        .container-bg{
             position: fixed;
             z-index: -1;
             width: 100vw;
@@ -28,7 +28,7 @@ body{
                 #video{
                 }
 
-    .mid{
+    .page-one-top{
         width: 100vw;
         height: 100vh;
     }
@@ -46,54 +46,77 @@ body{
                 display: flex;
                 flex-direction: row;
                 height: 100px;
-                width: 700px;
+                width: 725px;
                 align-items: center;
                 justify-content: space-between;
             }
                 .menu ul{
                     font-weight: 800;
                     padding: 0;
-                    width: 500px;
                     display: flex;
                     list-style: none;
                     justify-content: space-between;
                     align-items: center;
+                    letter-spacing: 5px;
                 }
                     .menu ul li{
-                        width: 0px;
+                        width: 125px;
                     }
+                        .menu ul li:hover{
+                            color: #4bd1a0;
+                            transition: 0.5s;
+                            cursor: pointer;
+                        }
                 .menu svg{
                     height: 68px;
                 }
-        .king{
-            font-weight: 800;
+                .menu svg:hover{
+                    cursor: pointer;
+                }
+                    
+        .page-one-mid{
+            height: 45vw;
             display: flex;
             flex-direction: column;
-            height: 75vh;
-            justify-content: center;
-        }
-            .king h1{
-                margin: 0;
-                padding: 0;
-                font-size: 100px;
-                height: 70px;
-            }
-        .buy{
-            height: 175px;
-            justify-content: center;
-            text-align: center;
-            display: flex;
             align-content: center;
+            justify-content: center;
             align-items: center;
         }
-            .buy span{         
-                height: 30px;
-                padding: 15px 0 0 0;
-                width: 150px;
-                color: white;
-                vertical-align: middle;
-                border: 2px solid white;
+            .king{
+                font-weight: 800;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
+                .king h1{
+                    margin: 0;
+                    padding: 0;
+                    font-size: 100px;
+                    height: 71px;
+                    letter-spacing: 15px;
+                }
+            .buy{
+                height: 175px;
+                justify-content: center;
+                text-align: center;
+                display: flex;
+                align-content: center;
+                align-items: center;
+            }
+                .buy span{         
+                    height: 30px;
+                    padding: 15px 0 0 0;
+                    width: 170px;
+                    color: white;
+                    vertical-align: middle;
+                    border: 2px solid white;
+                }
+                    .buy span:hover{
+                        cursor: pointer;
+                        background-color: white;
+                        color: black;
+                        transition: 0.5s;
+                    }
 .page-two{
     background-color: white;
     padding: 40px 0px 30px 0px;
@@ -110,11 +133,18 @@ body{
         justify-content: center;
     }
         .page-two-one-left{
-            width: 80px;
+            width: 95px;
             z-index: 1;
+            display: flex;
+            flex-direction: column;
         }
+            .nova-co{
+                height: 200px;
+                letter-spacing: 10px;
+            }
             .ver-todas{
                 display: flex;
+                border: 2px solid black;
                 color: white;
                 height: 45px;
                 width: 200px;
@@ -122,6 +152,11 @@ body{
                 align-items: center;
                 justify-content: center;background-color: black;
             }
+                .ver-todas:hover{
+                    transition: 0.5s;
+                    background-color: #ffffff00;
+                    color: black;
+                }
         .page-two-one-right{
             vertical-align: middle;
             display: flex;
@@ -139,6 +174,10 @@ body{
         justify-content: center;
         column-gap: 13px;
     }
+        .page-two-two div img:hover{
+            box-shadow: 0px 0px 0px 8px;
+            transform: scale(0.95);
+        }
 .page-three{
     height: 100vh;
     width: 100vw;
@@ -147,44 +186,53 @@ body{
     background-image: url("midia/page-three/bg.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
-    .page-three-left{
-        width: 50px;
-        width: 50px;
-        padding-bottom: 200px;
-        z-index: 1;
+    .page-three-box{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 0 100px;
     }
-    .page-three-mid{
-        color: white;
-        height: 350px;
-        width: 550px;
-        background-color: black;
-    }
-        .page-three-mid div{ 
-        padding: 150px 0px 0px 100px;
-        text-align: left;
-        width: 350px;
-        height: 150px;
+        .page-three-left{
+            width: 50px;
+            width: 50px;
+            padding-bottom: 200px;
+            z-index: 1;
+            letter-spacing: 10px;
         }
-    .page-three-right{
-        height: 50px;
-        width: 50px;
-        padding: 325px 0px 0px 0px;
-    }
-        .nossa-his{
-            display: flex;
-            height: 45px;
-            width: 300px;
-            background-color: white;
-            justify-content: center;
-            align-items: center;
-            margin: 0px 0px 0px -225px;
+        .page-three-mid{
+            color: white;
+            height: 350px;
+            width: 550px;
+            background-color: black;
         }
-            .page-three-right span{
+            .page-three-mid div{ 
+            padding: 150px 0px 0px 100px;
+            text-align: left;
+            width: 350px;
+            height: 150px;
             }
+        .page-three-right{
+            height: 50px;
+            width: 50px;
+            padding: 325px 0px 0px 0px;
+        }
+            .nossa-his{
+                display: flex;
+                height: 45px;
+                width: 300px;
+                background-color: white;
+                justify-content: center;
+                align-items: center;
+                margin: 0px 0px 0px -225px;
+            }
+                .nossa-his:hover{
+                    box-shadow: inset 0px 0px 0px 3px black;
+                }
+                .page-three-right span{
+                }
 .page-four{
     display: flex;
     height: 60vh;
@@ -194,7 +242,13 @@ body{
     background-size: cover;
     align-items: center;
     justify-content: center;
+    letter-spacing: 5px;
 }
+    .page-four div:hover{
+        color: #4bd1a0;
+        transition: 0.5s;
+        cursor: pointer;
+    }
 .page-five{
     width: 100vw;
     padding-top: 10vh;
@@ -214,7 +268,12 @@ body{
             flex-direction: column;
             padding: 0;
             align-items: flex-start;
+            height: 100px;
+            justify-content: space-around;
         }
+    .page-five-left p{
+        width: 180px;
+    }
     .page-five-right{
         width: 500px;
         text-align: left;
@@ -223,13 +282,38 @@ body{
             width: 500px;
             display: flex;
             column-gap: 15px;
+            align-items: center;
         }
-            .email p{
-                border: 1px solid white;
-                
-                padding: 5px 30px 5px 30px;
+            #email-box{
+                width: 350px;
+                height: 38px;
+                background-color: #ffffff00;
+                border: 2px solid white;
+                color: white;
             }
+                #email-box::placeholder{
+                    width: 225px;
+                    text-align: center;
+                    color: white;
+                    font-size: 16px;
+                }
+                #email-box:hover{
+                    border-radius: 0px;
+                    box-shadow: inset 0px 0px 0px 3px white;
+                }
+            .email p{
+                border: 2px solid white;
+                height: 20px;
+                padding: 10px 30px 10px 30px;
+            }
+                .email p:hover{
+                    cursor: pointer;
+                    background-color: white;
+                    color: black;
+                    transition: 0.5s;
+                }
         .contact{
+            padding: 30px 0 0 0;            
             display: flex;
             align-items: center;
             width: 500px;
