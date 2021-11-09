@@ -38,15 +38,16 @@ body{
         padding: 0;
         position: fixed;
         display: flex;
-        width: 1600px;
+        width: 100vw;
         height: 100px;
         background-color: var(--brown);
+        justify-content: center;
     }
         .header-left{
             font-family: "WorkSans-SemiBold";
             display: flex;
             align-items: center;
-            width: 25vw;
+            width: 650px;
         }
             .logo{
                 height: 28px;
@@ -63,7 +64,7 @@ body{
                     cursor: pointer;
                 }
         .header-right{
-            width: 70vw;
+            width: 800px;
             display: flex;
             align-items: center;
             justify-content: flex-end;
@@ -434,11 +435,9 @@ body{
                     font-size: 15px;
                 }
     .page-six{
-        height: 800px;
-        width: 1600px;
-        display: flex;
-        justify-content: flex-end;
+        width: 100vw;
         align-items: center;
+        display: flex;
         flex-direction: column;
         background-color: var(--blue);
         color: white;
