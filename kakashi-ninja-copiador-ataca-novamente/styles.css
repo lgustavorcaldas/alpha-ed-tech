@@ -16,6 +16,13 @@ body{
     padding: 0;
     color: var(--blue);
 }
+.kakashi{
+    background-color: yellow;
+    position: fixed;
+    width: 400px;
+    text-align: center;
+    z-index: 1;
+}
 .container{
     margin: 0 auto;
     padding: 0;
