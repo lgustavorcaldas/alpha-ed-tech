@@ -1,7 +1,7 @@
 document.getElementById("name").innerHTML = "Luiz Gustavo Ribeiro Caldas da Silva";
 document.getElementById("age").innerHTML = "22";
 document.getElementById("state").innerHTML = "São Paulo";
-document.getElementById("pic").src = "/assets/pic.jpg";
+document.getElementById("pic").src = "assets/pic.jpg";
 
 document.getElementById("one").innerHTML = "RPG de mesa";
 document.getElementById("two").innerHTML = "Sou mestre de RGP desde meus 18 anos.";
@@ -11,4 +11,4 @@ document.getElementById("three").innerHTML = "O RPG de mesa, ou RPG de papel e c
 document.getElementById("four").innerHTML = "Ref:";
 document.getElementById("five").innerHTML = "https://www.zoom.com.br/jogos/deumzoom/rpg-de-mesa";
 
-document.getElementById("pic2").src = "/assets/pic2.jpg";
+document.getElementById("pic2").src = "assets/pic2.jpg";
