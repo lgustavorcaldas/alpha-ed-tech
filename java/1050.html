@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1050</title>
+</head>
+<body>
+    <p>Read an integer number that is the code number for phone dialing. Then, print the destination according to the following table:</p>
+    <img src="https://resources.beecrowd.com.br/gallery/images/problems/UOJ_1050.png">
+    <p>If the input number isn’t found in the above table, the output must be:
+        DDD nao cadastrado.</p>
+    <h2>Input</h2>
+    <p>The input consists in a unique integer number.</p>
+
+    <h2>Output</h2>
+    <p>Print the city name corresponding to the input DDD. Print DDD nao cadastrado if doesn't exist corresponding DDD to the typed number.</p>
+
+    <input type="number" id="num" name="num" placeholder="DDD">
+    <input type="button" id="btn" value="send" onclick="func()">
+    <span id="demo"></span>
+
+        <script>
+            function func(){
+                let ddd = parseFloat(document.getElementById("num").value);
+
+                // if ( ddd == 61){
+                //     dest = "Brasilia";
+                // } else if( ddd == 71){
+                //     dest = "Salvador";
+                // } else if( ddd == 11){
+                //     dest = "Sao Paulo";
+                // } else if( ddd == 21){
+                //     dest = "Rio de Janeiro";
+                // } else if( ddd == 32){
+                //     dest = "Juiz de Fora";
+                // } else if( ddd == 19){
+                //     dest = "Campinas";
+                // } else if( ddd == 27){
+                //     dest = "Vitoria";
+                // } else if( ddd == 31){
+                //     dest = "Belo Horizonte";
+                // } else{
+                //     dest = "DDD nao cadastrado";
+                // }
+
+                switch (ddd){
+                    case 61: 
+                        dest = "Brasilia";
+                    break;
+                    case 71:
+                        dest = "Salvador";
+                    break;
+                    default:
+                        dest = "DDD nao cadastrado";
+                }
+
+                document.getElementById("demo").innerHTML = dest;
+            }
+
+        </script>
+
+</body>
+</html>

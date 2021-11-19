@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1041</title>
+</head>
+<body>
+    <p>Write an algorithm that reads two floating values (x and y), which should represent the coordinates of a point in a plane. Next, determine which quadrant the point belongs, or if you are at one of the Cartesian axes or the origin (x = y = 0).</p>
+    <img src="https://resources.beecrowd.com.br/gallery/images/problems/UOJ_1041.png">
+    <p>If the point is at the origin, write the message "Origem".<br /><br />
+
+    If the point is at X axis write "Eixo X", else if the point is at Y axis write "Eixo Y".</p>
+    <h2>Input</h2>
+    <span>The input contains the coordinates of a point.</span>
+    <h2>Output</h2>
+    <span>The output should display the quadrant in which the point is.</span>
+
+    <input type="number" id="x" name="x" placeholder="CoordX">
+    <input type="number" id="y" name="y" placeholder="CoordY">
+    <input type="button" id="btn" value="send" onclick="func()">
+    <p id="demo"></p>
+
+    <script>
+        function func(){
+            let px = document.getElementById("x").value;
+            let py = document.getElementById("y").value;
+
+            if( px == 0 && py == 0){
+                result = "Origem";
+            } else if( px == 0){
+                result = "Eixo X";
+            } else if( py == 0){
+                result = "Eixo Y";
+            }else if( px > 0 && py > 0){
+                result = "Q1";
+            } else if( px > 0 && py < 0){
+                result = "Q4";
+            } else if( px < 0 && py > 0){
+                result = "Q2";
+            } else if( px < 0 && py < 0){
+                result = "Q3";
+            } else{
+                result = "ERRO"
+            }
+
+            document.getElementById("demo").innerHTML = result;
+
+        }
+
+    </script>
+
+</body>
+</html>

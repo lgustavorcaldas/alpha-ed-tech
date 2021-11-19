@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1012</title>
+</head>
+<body>
+    
+    <input type="number" id="a" name="a"  placeholder="A">
+    <input type="number" id="b" name="b"  placeholder="B">
+    <input type="number" id="c" name="c"  placeholder="C">
+    <input type="button" onclick="func()" id="btn" name="btn" value="send"><br/><br/>
+        
+    <span>a) the area of the rectangled triangle that has base A and height C.<p id="showa"></p></span><br/>
+    <span>b) the area of the radius's circle C. (pi = 3.14159)<p id="showb"></p></span><br/>
+    <span>c) the area of the trapezium which has A and B by base, and C by height.<p id="showc"></p></span><br/>
+    <span>d) the area of ​​the square that has side B.<p id="showd"></p></span><br/>
+    <span>e) the area of the rectangle that has sides A and B.<p id="showe"></p></span><br/>
+
+    <script>
+        
+        function func(){
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            let c = document.getElementById("c").value;
+
+            // a
+            let showa = (parseFloat(a) * parseFloat(c)) / 2;
+            // b
+            let mathb = parseFloat(c) ** 2
+            let showb = 3.14159 * mathb;
+            // c
+            let showc = parseFloat(c) *((parseFloat(a) + parseFloat(b))/ 2 );
+            // d
+            let showd = parseFloat(b) * parseFloat(b);
+            // e
+            let showe = parseFloat(a) * parseFloat(b);
+
+            document.getElementById("showa").innerHTML = (showa).toFixed(2);
+            document.getElementById("showb").innerHTML = (showb).toFixed(2);
+            document.getElementById("showc").innerHTML = (showc).toFixed(2);
+            document.getElementById("showd").innerHTML = (showd).toFixed(2);
+            document.getElementById("showe").innerHTML = (showe).toFixed(2);
+
+        }
+
+    </script>
+
+</body>
+</html>

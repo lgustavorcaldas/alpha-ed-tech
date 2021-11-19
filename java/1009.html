@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1009</title>
+</head>
+<body>
+
+    <input type="text" id="name" name="name" placeholder="Nome">
+    <input type="number" id="salary" name="salary" placeholder="Salario">
+    <input type="number" id="sales" name="sales" placeholder="Vendas">
+
+    <input type="button" onclick="func()" value="Submit">
+
+    <p id="show"></p>
+
+    <script>
+            
+        function func(){
+            
+            let x = document.getElementById("name");
+            let k = x.value; 
+            let y = document.getElementById("salary").value;
+            let z = document.getElementById("sales").value;
+
+            let w = z * 0.15;
+
+            let m = parseFloat(y) + parseFloat(w);
+
+            let Show = k  + " // TOTAL = "+ "R$ " + m;
+
+            document.getElementById("show").innerHTML = Show;
+
+            console.log(Show)
+
+        }
+
+    </script>
+    
+</body>
+</html>
