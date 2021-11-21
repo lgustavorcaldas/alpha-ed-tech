@@ -3,6 +3,7 @@
     --blue: #3a54b4;
     --orange: #ff8b7c;
     --brown: #fef7ed;
+    overflow-x: hidden;
 }
 /* fonts */
 @font-face { font-family: Madefor; src: url("media/WixMadeforTextVF_W_Wght.8022447a.woff2") format("woff2-variations"); font-style: normal; font-weight: 400 800; font-display: swap; }
