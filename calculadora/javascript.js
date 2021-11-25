@@ -23,29 +23,25 @@ function operation(op){
     document.getElementById("sign").innerHTML = sign;
 
 }
-
 function result(){
     varTwo = screenTwo.innerHTML;
-
     switch(sign){
         case '*':
-            show = varOne * varTwo;
+            show = parseFloat(varOne) * parseFloat(varTwo);
               break;
-        case '+':
-            show = varOne + varTwo;
-            break;
         case '-':
-            show = varOne - varTwo;
+            show = parseFloat(varOne) - parseFloat(varTwo);
             break;
         case '/':
-            show = varOne / varTwo;
+            show = parseFloat(varOne) / parseFloat(varTwo);
             break;
-      }
+        case '+':
+            show = parseFloat(varOne) + parseFloat(varTwo);
+            break;
+    }
     screenThree.innerHTML = show.toFixed(2);
-    
     sign = "";
 }
-
 function trash(){
     screenOne.innerHTML = "";
     screenTwo.innerHTML = "";
