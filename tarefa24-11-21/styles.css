@@ -4,7 +4,7 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 body{
-    background: linear-gradient(to top, #b5becc, #ff359b);
+    background: linear-gradient(to top, #91a8cf, #ff3568);
     background-size: cover;
     background-repeat: no-repeat;
     height: 125vh;
@@ -19,6 +19,9 @@ section{
 }
 i{
     font-size: 10px;
+}
+h1{
+    text-decoration: underline;
 }
 main{
     display: flex;
@@ -59,7 +62,10 @@ main{
             width: 300px;
         }
         #show{
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.1);
             box-shadow: 3px 3px 3px 0px rgba(110, 110, 110, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.01);
+            height: 30px;
+            width: 100px;
+            color: white;
         }
