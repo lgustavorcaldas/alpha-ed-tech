@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subway</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+        <main class="container">
+            <header>
+                <h2>SubaWays</h2>
+            </header>
+            <div class="top">
+                <h3>Monte seu próprio lanche!</h3>
+            </div>
+            <form action="get">
+                <p>
+                    <b>Opção de Pão:</b><br />
+                    <input type="radio" id="bread-one" name="breadtype" value="3">
+                    <label for="bread-one">Pão Francês (R$3,00)</label>
+                    <input type="radio" id="bread-two" name="breadtype" value="8">
+                    <label for="bread-two">Pão Australiano (R$8,00)</label>
+                    <input type="radio" id="bread-three" name="breadtype" value="6">
+                    <label for="bread-three">Pão de Brioche (R$6,00)</label>
+                </p>
+                <p>
+                    <b>Opção de Hambúrguer:</b><br />
+                    <input type="radio" id="burguer-one" name="burguertype" value="13">
+                    <label for="burguer-one">Búrguer de Picanha (R$13,00)</label>
+                    <input type="radio" id="burguer-two" name="burguertype" value="10">
+                    <label for="burguer-two">Búrguer de Costela (R$10,00)</label>
+                    <input type="radio" id="burguer-three" name="burguertype" value="12">
+                    <label for="burguer-three">Búrguer Vegano (R$12,00)</label>
+                </p>
+                <p>
+                    <b>Opção de Salada:</b><br />
+                    <input type="radio" id="salad-one" name="saladtype" value="1.5">
+                    <label for="salad-one">Alface (R$1,50)</label>
+                    <input type="radio" id="salad-two" name="saladtype" value="1.5">
+                    <label for="salad-two">Tomate (R$1,50)</label>
+                    <input type="radio" id="salad-three" name="saladtype" value="0.0">
+                    <label for="salad-three">Sem Salada (R$0,00)</label>
+                </p>
+                <p>
+                    <b>Opção de Queijo:</b><br />
+                    <input type="radio" id="cheese-one" name="cheesetype" value="3">
+                    <label for="cheese-one">Mussarela (R$3,00)</label>
+                    <input type="radio" id="cheese-two" name="cheesetype" value="3">
+                    <label for="cheese-two">Prato (R$3,00)</label>
+                    <input type="radio" id="cheese-three" name="cheesetype" value="5">
+                    <label for="cheese-three">Cheddar (R$5,00)</label>
+                </p>
+                <input type="button" name="" id="input-btn" onclick="func()" value="Finalizou?">
+                <p id="demo"></p>
+            </form>
+        </main>
+    </section>
+<script src="javascript.js"></script>
+</body>
+</html>
