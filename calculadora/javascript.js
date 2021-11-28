@@ -7,10 +7,7 @@ let sign = "";
 let show = "";
 
 function showNumber(num){
-    if(show != ""){
-        screenOne.innerHTML = "";
-        screenOne.innerHTML +=  show;
-    }else if(sign === ""){
+    if(sign === ""){
         screenOne.innerHTML +=  num;
     } else{
         screenTwo.innerHTML +=  num;

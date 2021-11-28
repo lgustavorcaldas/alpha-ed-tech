@@ -15,7 +15,7 @@ section{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #ffba8f, #e0ddf1);
+    background: linear-gradient(to bottom, #d68fff, #ddeaf1);
 }
     section .color{
         position: absolute;
@@ -25,21 +25,21 @@ section{
         top: -350px;
         width: 600px;
         height: 600px;
-        background: #fc22f1;
+        background: #2231fc;
     }
     section .color:nth-child(2){
         bottom: -150px;
         left: 100px;
         width: 500px;
         height: 500px;
-        background: #ff48aa;
+        background: #48e4ff;
     }
     section .color:nth-child(3){
         bottom: 50px;
         right: 100px;
         width: 300px;
         height: 300px;
-        background: #c131ff;
+        background: #6f31ff; 
     }
 span{
     color: white;
