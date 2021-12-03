@@ -6,6 +6,8 @@ let winPedro = 0;
 let winJuca = 0;
 let winEdna = 0;
 
+let demo;
+
 function velCarPedro(){
     return Math.floor(Math.random() * (230 - 150 + 1) ) + 150;
 }
@@ -34,7 +36,6 @@ function btnRuns(runs){
             runs++
         }
         
-        // Resolvedor de bug
         if(i == runs -1){
             if(winPedro == winJuca && winPedro > winEdna){
                 runs++
@@ -53,23 +54,18 @@ function btnRuns(runs){
 
     if(resulttwo == winPedro){
         winner = "Pedro Ganhou!";
+        demo = "pedro";
     } else if(resulttwo == winJuca){
         winner = "Juca Ganhou!";
+        demo = "juca";
     } else{
         winner = "Edna Ganhou!";
+        demo = "edna";
     }
 
-    document.getElementById("demo").innerHTML += "<p>" + winner + "</p>";
-
-    console.log(winPedro)
-    console.log(winJuca)
-    console.log(winEdna)
-    console.log(runs)
+    document.getElementById(demo).innerHTML += "<p>" + winner + "</p>";
 
     winPedro = 0;
     winJuca = 0;
     winEdna = 0;
 }
-
-
-
