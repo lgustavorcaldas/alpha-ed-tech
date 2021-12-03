@@ -1,0 +1,43 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+:root{
+    --cell-size: 100px;
+    --mark-size: calc(var(var(--cell-size)) * 0.9);
+}
+body{
+    margin: 0;
+}
+ .board{
+     width: 100vw;
+     height: 100vw;
+     display: grid;
+     justify-content: center;
+     align-content: center;
+     justify-items: center;
+     align-items: center;
+     grid-template-columns: repeat(3 , auto);
+ }
+  .cell{
+      width: var(--cell-size);
+      height: var(--cell-size);
+      border: 1px solid rgb(0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-content: center;
+  }
+   .cell:first-child, .cell:nth-child(2), .cell:nth-child(3){
+       border-top: none;
+   }
+   .cell:first-child, .cell:nth-child(4), .cell:nth-child(7){
+       border-left: none;
+   }
+   .cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9){
+    border-right: none;
+   }
+   .cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9){
+    border-bottom: none;
+   }
+   .cell.x{
+       background-color: yellow;
+   }

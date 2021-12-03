@@ -64,7 +64,7 @@ function btnRuns(runs){
     }
 
     document.getElementById(demo).innerHTML += "<p>" + winner + "</p>";
-
+    
     winPedro = 0;
     winJuca = 0;
     winEdna = 0;

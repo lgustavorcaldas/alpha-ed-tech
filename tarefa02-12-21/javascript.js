@@ -1,48 +1,41 @@
 const numbs = [];
-let i;
-let numbOne;
-let numbTwo;
-let numbThree;
-let numbFour;
-
-function getnumbs(){
-    numbOne = document.getElementById("one").value;
-    numbTwo = document.getElementById("two").value;
-    numbThree = document.getElementById("three").value;
-    numbFour = document.getElementById("four").value;
-}
-
+let aux = document.querySelectorAll(".inputs");
 function clearAll(){
     document.getElementById("demo").innerHTML = " ";
     numbs.length = 0;
+    aux.forEach(element => {
+        element.value = ""
+    });
 }
-
+function getNumbs(){
+    numbs.push(parseInt(document.getElementById("four").value))
+    numbs.push(parseInt(document.getElementById("three").value))
+    numbs.push(parseInt(document.getElementById("two").value))
+    numbs.push(parseInt(document.getElementById("one").value))
+}
 function invert(){
-    getnumbs()
-    numbs.push(numbFour)
-    numbs.push(numbThree)
-    numbs.push(numbTwo)
-    numbs.push(numbOne)
-
+    getNumbs()
     document.getElementById("demo").innerHTML = numbs;
 }
-
 function increasing() {
-    getnumbs()
-    for(i=0; i<9; i++){
-        if(numbOne > numbTwo && numbOne > numbThree && numbOne > numbFour){
-            numbs.push(numbOne);
-            numbOne = 0;
-        } else if(numbTwo > numbOne && numbTwo > numbThree && numbTwo > numbFour){
-            numbs.push(numbTwo);
-            numbTwo = 0;
-        } else if(numbThree > numbOne && numbThree > numbTwo && numbThree > numbFour){
-            numbs.push(numbThree);
-            numbThree = 0;
-        } else if(numbFour > numbOne && numbFour > numbTwo && numbFour > numbThree){
-            numbs.push(numbFour);
-            numbFour = 0;
+    getNumbs()
+    for(let i=0; i<9; i++){
+        if(numbs[0] > numbs[1] && numbs[0] > numbs[2] && numbs[0] > numbs[3]){
+            numbs.push(numbs[0]);
+            numbs[0] = "";
+        } else if(numbs[1] > numbs[0] && numbs[1] > numbs[2] && numbs[1] > numbs[3]){
+            numbs.push(numbs[1]);
+            numbs[1] = "";
+        } else if(numbs[2] > numbs[0] && numbs[2] > numbs[1] && numbs[2] > numbs[3]){
+            numbs.push(numbs[2]);
+            numbs[2] = "";
+        } else if(numbs[3] > numbs[0] && numbs[3] > numbs[1] && numbs[3] > numbs[2]){
+            numbs.push(numbs[3]);
+            numbs[3] = "";
+        } else{
+            i++
         }
     }
+    numbs.splice(0,4);
     document.getElementById("demo").innerHTML = numbs;
 }
