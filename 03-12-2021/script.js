@@ -1,13 +1,20 @@
-const cellElements = document.querySelectorAll("[data-cell")
-const X_CLASS = "x";
-const CIRCLE_CLASS = "circle";
-let circleTurn;
-let xTurn;
+let changTurn = true;
 
+let matrix =[["", "", ""],
+             ["", "", ""],
+             ["", "", ""]];
 
-cellElements.forEach(cell => {
-    cell.addEventListener('click', handleClick, {once: true})})
-
-function handleClick(e){
-    
+function changeMatrix(x,y){
+    if(matrix[x][y] == ""){
+        if(changTurn == true){
+            matrix[x][y] = 1;
+            changTurn = !changTurn
+        } else if (changTurn == false){
+            matrix[x][y] = 2;
+            changTurn = !changTurn
+        } else{
+            console.log("ERRO")
+        }
+    }
+    console.log(matrix)
 }
