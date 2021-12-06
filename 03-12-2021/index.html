@@ -10,15 +10,15 @@
 </head>
 <body>
     <div class="board" id="board">
-        <div class="box" onclick="changeMatrix(0,0)"></div>
-        <div class="box" onclick="changeMatrix(0,1)"></div>
-        <div class="box" onclick="changeMatrix(0,2)"></div>
-        <div class="box" onclick="changeMatrix(1,0)"></div>
-        <div class="box" onclick="changeMatrix(1,1)"></div>
-        <div class="box" onclick="changeMatrix(1,2)"></div>
-        <div class="box" onclick="changeMatrix(2,0)"></div>
-        <div class="box" onclick="changeMatrix(2,1)"></div>
-        <div class="box" onclick="changeMatrix(2,2)"></div>
+        <div class="box" id="0x0" onclick="changeMatrix(0,0)" data-cell></div>
+        <div class="box" id="0x1" onclick="changeMatrix(0,1)" data-cell></div>
+        <div class="box" id="0x2" onclick="changeMatrix(0,2)" data-cell></div>
+        <div class="box" id="1x0" onclick="changeMatrix(1,0)" data-cell></div>
+        <div class="box" id="1x1" onclick="changeMatrix(1,1)" data-cell></div>
+        <div class="box" id="1x2" onclick="changeMatrix(1,2)" data-cell></div>
+        <div class="box" id="2x0" onclick="changeMatrix(2,0)" data-cell></div>
+        <div class="box" id="2x1" onclick="changeMatrix(2,1)" data-cell></div>
+        <div class="box" id="2x2" onclick="changeMatrix(2,2)" data-cell></div>
     </div>
     <div class="winning-message">
         <span id="demo"></span>
