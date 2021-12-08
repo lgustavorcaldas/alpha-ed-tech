@@ -1,131 +1,136 @@
 // Variaveis
-let carPedro;
-let carJuca;
-let carEdna;
+let cars ={     Pedro: [0],
+                Juca: [0],
+                Edna: [0]   }
 
-let rollCarPedro;
-let rollCarJuca;
-let rollCarEdna;
+let wins ={     Pedro: [0],
+                Juca: [0],
+                Edna: [0]   }
 
-let winPedro = 0;
-let winJuca = 0;
-let winEdna = 0;
+let rules ={       CarSS:{     velMax: [230, 210],
+                                velMin: [160, 140],
+                                der: [175, 100]     },
 
-        // Variaveis aleatorias dos carros
-        let velMaxSS;
-        let velMinSS;
-        let derSS;
+                    CarSp: {    velMax: [215, 195],
+                                velMin: [145, 125],
+                                der: [300, 200]     },
 
-        let velMaxSp;
-        let velMinSp;
-        let derSp;
+                    CarPop: {   velMax: [200, 180],
+                                velMin: [130, 110],
+                                der: [400, 300]     }   }
 
-        let velMaxPop; 
-        let velMinPop;
-        let derPop;
+let carSS;
+let carSp;
+let carPop;
+let demo;
+let win;
+let x = 0;
 
 function randomCars(){
-    velMaxSS = (Math.floor(Math.random() * (230 - 210 + 1) ) + 210);
-    velMinSS = (Math.floor(Math.random() * (160 - 140 + 1) ) + 140);
-    derSS = ((Math.floor(Math.random() * (175 - 100 + 1) ) + 100)/10000);
+    carSS ={        velMax: (Math.floor(Math.random() * (rules.CarSS.velMax[0] - rules.CarSS.velMax[1] + 1) ) + rules.CarSS.velMax[1]),
+                    velMin:  (Math.floor(Math.random() * (rules.CarSS.velMin[0] - rules.CarSS.velMin[1] + 1) ) + rules.CarSS.velMin[1]),
+                    der: parseFloat((Math.floor(Math.random() * (rules.CarSS.der[0] - rules.CarSS.der[1] + 1) ) + rules.CarSS.der[1])/10000)       }
     
-    velMaxSp = (Math.floor(Math.random() * (215 - 195 + 1) ) + 195);
-    velMinSp = (Math.floor(Math.random() * (145 - 125 + 1) ) + 125);
-    derSp = ((Math.floor(Math.random() * (300 - 200 + 1) ) + 200)/10000);
-    
-    velMaxPop = (Math.floor(Math.random() * (200 - 180 + 1) ) + 180);
-    velMinPop = (Math.floor(Math.random() * (130 - 110 + 1) ) + 110);
-    derPop = ((Math.floor(Math.random() * (400 - 300 + 1) ) + 300)/10000);
+    carSp ={        velMax: (Math.floor(Math.random() * (rules.CarSp.velMax[0] - rules.CarSp.velMax[1] + 1) ) + rules.CarSp.velMax[1]),
+                    velMin: (Math.floor(Math.random() * (rules.CarSp.velMin[0] - rules.CarSp.velMin[1] + 1) ) + rules.CarSp.velMin[1]),
+                    der: ((Math.floor(Math.random() * (rules.CarSp.der[0] - rules.CarSp.der[1] + 1) ) + rules.CarSp.der[1])/10000)                 }
+
+    carPop ={       velMax: (Math.floor(Math.random() * (rules.CarPop.velMax[0] - rules.CarPop.velMax[1] + 1) ) + rules.CarPop.velMax[1]),
+                    velMin: (Math.floor(Math.random() * (rules.CarPop.velMin[0] - rules.CarPop.velMin[1] + 1) ) + rules.CarPop.velMin[1]),
+                    der: ((Math.floor(Math.random() * (rules.CarPop.der[0] - rules.CarPop.der[1] + 1) ) + rules.CarPop.der[1])/10000)           }
 }
 
 function rollCar(){
-    rollCarPedro = Math.floor((Math.random() * 20)+1);
-    rollCarJuca = Math.floor((Math.random() * 20)+1);
-    rollCarEdna = Math.floor((Math.random() * 20)+1);
+    let rolls = {       Pedro: Math.floor((Math.random() * 20)+1),
+                        Juca: Math.floor((Math.random() * 20)+1),
+                        Edna: Math.floor((Math.random() * 20)+1)     }
 
     randomCars()
 
-    if(rollCarPedro == 20){
-        carPedro = (Math.floor(Math.random() * (velMaxSS - velMinSS + 1) ) + velMinSS);
-        carPedro = (carPedro - (carPedro * derSS));
-    } else if(rollCarPedro >= 13 && rollCarPedro <= 19 ){
-        carPedro = (Math.floor(Math.random() * (velMaxSp - velMinSp + 1) ) + velMinSp);
-        carPedro = (carPedro - (carPedro * derSp));
+    if(rolls.Pedro == 20){
+        cars.Pedro = (Math.floor(Math.random() * (carSS.velMax - carSS.velMin + 1) ) + carSS.velMin);
+        cars.Pedro = (cars.Pedro - (cars.Pedro * carSS.der));
+    } else if(rolls.Pedro >= 13 && rolls.Pedro <= 19 ){
+        cars.Pedro = (Math.floor(Math.random() * (carSp.velMax - carSp.velMin + 1) ) + carSp.velMin);
+        cars.Pedro = (cars.Pedro - (cars.Pedro * carSp.der));
     } else{
-        carPedro = (Math.floor(Math.random() * (velMaxPop - velMinPop + 1) ) + velMinPop);
-        carPedro = (carPedro - (carPedro * derPop));
+        cars.Pedro = (Math.floor(Math.random() * (carPop.velMax - carPop.velMin + 1) ) + carPop.velMin);
+        cars.Pedro = (cars.Pedro - (cars.Pedro * carPop.der));
     }
 
-    if(rollCarJuca == 20){
-        carJuca = (Math.floor(Math.random() * (velMaxSS - velMinSS + 1) ) + velMinSS);
-        carJuca = (carJuca - (carJuca * derSS));
-    } else if(rollCarJuca >= 13 && rollCarJuca <= 19 ){
-        carJuca = (Math.floor(Math.random() * (velMaxSp - velMinSp + 1) ) + velMinSp);
-        carJuca = (carJuca - (carJuca * derSp));
+    if(rolls.Juca == 20){
+        cars.Juca = (Math.floor(Math.random() * (carSS.velMax - carSS.velMin + 1) ) + carSS.velMin);
+        cars.Juca = (cars.Juca - (cars.Juca * carSS.der));
+    } else if(rolls.Juca >= 13 && rolls.Juca <= 19 ){
+        cars.Juca = (Math.floor(Math.random() * (carSp.velMax - carSp.velMin + 1) ) + carSp.velMin);
+        cars.Juca = (cars.Juca - (cars.Juca * carSp.der));
     } else{
-        carJuca = (Math.floor(Math.random() * (velMaxPop - velMinPop + 1) ) + velMinPop);
-        carJuca = (carJuca - (carJuca * derPop));
+        cars.Juca = (Math.floor(Math.random() * (carPop.velMax - carPop.velMin + 1) ) + carPop.velMin);
+        cars.Juca = (cars.Juca - (cars.Juca * carPop.der));
     }
 
-    if(rollCarEdna == 20){
-        carEdna = (Math.floor(Math.random() * (velMaxSS - velMinSS + 1) ) + velMinSS);
-        carEdna = (carEdna - (carEdna * derSS));
-    } else if(rollCarEdna >= 13 && rollCarEdna <= 19 ){
-        carEdna = (Math.floor(Math.random() * (velMaxSp - velMinSp + 1) ) + velMinSp);
-        carEdna = (carEdna - (carEdna * derSp));
+    if(rolls.Edna == 20){
+        cars.Edna = (Math.floor(Math.random() * (carSS.velMax - carSS.velMin + 1) ) + carSS.velMin);
+        cars.Edna = (cars.Edna - (cars.Edna * carSS.der));
+    } else if(rolls.Edna >= 13 && rolls.Edna <= 19 ){
+        cars.Edna = (Math.floor(Math.random() * (carSp.velMax - carSp.velMin + 1) ) + carSp.velMin);
+        cars.Edna = (cars.Edna - (cars.Edna * carSp.der));
     } else{
-        carEdna = (Math.floor(Math.random() * (velMaxPop - velMinPop + 1) ) + velMinPop);
-        carEdna = (carEdna - (carEdna * derPop));
+        cars.Edna = (Math.floor(Math.random() * (carPop.velMax - carPop.velMin + 1) ) + carPop.velMin);
+        cars.Edna = (cars.Edna - (cars.Edna * carPop.der));
     }
 }
-
-
 function btnRuns(runs){
+    if(x != 0){
+        document.getElementById(demo).style.marginLeft = "50px";
+        document.getElementById(win).innerHTML = "";
+    }
+    x++
+
     rollCar()
+
     for (var i = 0; i < runs; i++){
 
-        if(carPedro > carJuca && carPedro > carEdna){
-            winPedro++
-        } else if(carJuca > carPedro && carJuca > carEdna){
-            winJuca++
-        } else if(carEdna > carPedro && carEdna > carJuca){
-            winEdna++
+        if(cars.Pedro > cars.Juca && cars.Pedro > cars.Edna){
+            wins.Pedro++
+        } else if(cars.Juca > cars.Pedro && cars.Juca > cars.Edna){
+            wins.Juca++
+        } else if(cars.Edna > cars.Pedro && cars.Edna > cars.Juca){
+            wins.Edna++
         } else{
             runs++
         }
         
         if(i == runs -1){
-            if(winPedro == winJuca && winPedro > winEdna){
+            if(wins.Pedro == wins.Juca && wins.Pedro > wins.Edna){
                 runs++
-            } else if(winPedro == winEdna && winPedro > winJuca){
+            } else if(wins.Pedro == wins.Edna && wins.Pedro > wins.Juca){
                 runs++
-            } else if(winJuca == winEdna && winJuca > winPedro){
+            } else if(wins.Juca == wins.Edna && wins.Juca > wins.Pedro){
                 runs++
-            } else if(winPedro == winJuca && winJuca == winEdna){
+            } else if(wins.Pedro == wins.Juca && wins.Juca == wins.Edna){
                 runs++
             }
         }
     }
     
-    let resultone = ( winPedro+winJuca + Math.abs(winJuca-winPedro) )/2
-    let resulttwo = ( resultone+winEdna + Math.abs(winEdna-resultone) )/2
+    let resultone = ( wins.Pedro+wins.Juca + Math.abs(wins.Juca-wins.Pedro) )/2
+    let resulttwo = ( resultone+wins.Edna + Math.abs(wins.Edna-resultone) )/2
 
-    if(resulttwo == winPedro){
-        winner = "Pedro Ganhou!";
-    } else if(resulttwo == winJuca){
-        winner = "Juca Ganhou!";
+    if(resulttwo == wins.Pedro){
+        demo = "carPedro"
+        win = "winPedro"
+    } else if(resulttwo == wins.Juca){
+        demo = "carJuca"
+        win = "winJuca"
     } else{
-        winner = "Edna Ganhou!";
+        demo = "carEdna"
+        win = "winEdna"
     }
+    document.getElementById(demo).style.marginLeft = "450px";
+    document.getElementById(win).innerHTML = "GANHADOR!";
 
-    document.getElementById("demo").innerHTML += "<p>" + winner + "</p>";
-    
-    console.log(rollCarPedro + " " + carPedro)
-    console.log(rollCarJuca + " " + carJuca)
-    console.log(rollCarEdna + " " + carEdna)
-    console.log("~~~~~~~~")
-    
-    winPedro = 0;
-    winJuca = 0;
-    winEdna = 0;
+    wins.Pedro = 0;
+    wins.Juca = 0;
+    wins.Edna = 0;
 }
