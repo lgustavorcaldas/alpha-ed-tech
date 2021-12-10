@@ -8,30 +8,64 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-        <section id="btn-run">
-            <button type="button" onclick="{btnRuns(10)}">10</button>
-            <button type="button" onclick="{btnRuns(70)}">70</button>
-            <button type="button" onclick="{btnRuns(160)}">160</button>
+    <div class="container">
+        <main>
+            <section id="btn-run">
+                <button class="btn" type="button" onclick="{btnRuns(10)}">10</button>
+                <button class="btn" type="button" onclick="{btnRuns(70)}">70</button>
+                <button class="btn" type="button" onclick="{btnRuns(160)}">160</button>
+            </section>
+            <section id="flag">
+                <div class="street">
+                    <h1>Pedro</h1>
+                    <span id="winPedro"></span>
+                    <div id="carPedro"></div>
+                </div>
+                <div class="street">
+                    <h1>Juca</h1>
+                    <span id="winJuca"></span>
+                    <div id="carJuca"></div>
+                </div>
+                <div class="street">
+                    <h1>Edna</h1>
+                    <span id="winEdna"></span>
+                    <div id="carEdna"></div>
+                </div>
+            </section>
+            <section id="info">
+                <div>
+                    Level Piloto:
+                    <p id="lvlPedro"></p>
+                </div>
+                <div>
+                    Level Piloto:
+                    <p id="lvlJuca"></p>
+                </div>
+                <div>
+                    Level Piloto:
+                    <p id="lvlEdna"></p>
+                </div>
+
+            </section>
+        </main>
+        <section class="bot">
+            <div id="podium">
+                <div>
+                    <h1>Vice</h1>
+                    <h2 id="vice"></h2>
+                </div>
+                <div>
+                    <h1>Campeão</h1>
+                    <h1 id="champ"></h1>
+                </div>
+                <div>
+                    <h1>Terceiro</h1>
+                    <h3 id="terceiro"></h3>
+                </div>
+            </div>
         </section>
-        <section id="flag">
-            <div class="street">
-                <h1>Pedro</h1>
-                <span id="winPedro"></span>
-                <div id="carPedro"></div>
-            </div>
-            <div class="street">
-                <h1>Juca</h1>
-                <span id="winJuca"></span>
-                <div id="carJuca"></div>
-            </div>
-            <div class="street">
-                <h1>Edna</h1>
-                <span id="winEdna"></span>
-                <div id="carEdna"></div>
-            </div>
-        </section>
-    </main>
+    </div>
+    <button type="button" id="simu" onclick="hard()">Don't Click</button>
 
 <script src="javascript-test.js"></script>
 </body>
