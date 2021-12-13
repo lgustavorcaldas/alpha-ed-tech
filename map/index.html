@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main class="container">
+        <section id="top">
+            <form id="frm">
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name">
+                <label for="date">Data de Vencimento</label>
+                <input type="date" name="date" id="date">
+                <label for="value">Valor da Compra</label>
+                <input type="number" name="value" id="value">
+            </form>
+        </section>
+        <div class="btn">
+            <button type="submit" onclick="store()" id="btn">Send</button>
+        </div>
+        <section id="mid">
+            <div>
+                <table id="table">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Data de Vencimento</th>
+                        <th>Valor</th>
+                    </tr>
+            </div>
+        </section>
+        <div class="btn1">
+            <button type="submit" onclick="tardy()" id="btn1">Calculo de Juros</button>
+        </div>
+        <section>
+            
+        </section>
+
+    </main>
+
+<script src="javascript.js"></script>
+</body>
+</html>
