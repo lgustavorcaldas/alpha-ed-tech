@@ -6,7 +6,7 @@
 body{
     margin: 25px auto;
 }
-.btn{
+.btn, .btn1{
     display: flex;
     justify-content: center;
 }
@@ -32,9 +32,3 @@ th, td{
         background-color: white;
         height: 35px;
     }
-
-#btn1{
-    position: absolute;
-    margin: 250px 0 0 50px;
-
-}
