@@ -1,11 +1,11 @@
 // Variaveis
-let cars ={     Pedro: [0],
-                Juca: [0],
-                Edna: [0]   }
+let cars ={     Pedro: 0,
+                Juca: 0,
+                Edna: 0   }
 
-let wins ={     Pedro: [0],
-                Juca: [0],
-                Edna: [0]   }
+let wins ={     Pedro: 0,
+                Juca: 0,
+                Edna: 0   }
 
 let rules ={       CarSS:{     velMax: [230, 210],
                                 velMin: [160, 140],
