@@ -9,11 +9,11 @@ function game(x,y){
     if(arr[x][y] == 0){
     if(changeTurn == true){
         arr[x][y] = 1;
-        document.getElementById(id).innerHTML = "O";
+        document.getElementById(id).innerHTML = "o";
         document.getElementById(id).style.color = "#f72585"
     } else if(changeTurn == false){
         arr[x][y] = 2;
-        document.getElementById(id).innerHTML = "X";
+        document.getElementById(id).innerHTML = "x";
         document.getElementById(id).style.color = "#DEFF89"
     }
     changeTurn = !changeTurn
@@ -37,9 +37,11 @@ function mariaAmanda(){
         arr[0][2] != 0 && arr[0][2] == arr[1][1] && arr[0][2] == arr[2][0] ){
             changeTurn = !changeTurn
             if(changeTurn == true){
-                document.getElementById("winner").innerHTML = "Maria Amanda Ganhou"
+                document.getElementById("winner").innerHTML = "Circlo Ganhou!"
+                document.getElementById("winner").style.color = "#f72585"
             } else{
-                document.getElementById("winner").innerHTML = "Xis Amanda Ganhou"
+                document.getElementById("winner").innerHTML = "Xis Ganhou!"
+                document.getElementById("winner").style.color = "#DEFF89"
             }
             arr = [[13,13,13],[13,13,13],[13,13,13]]
         }
