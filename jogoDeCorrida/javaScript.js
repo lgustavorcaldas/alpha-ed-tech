@@ -107,55 +107,39 @@ function btnRuns(runs){
         console.log(pilot[0].wins + " " + pilot[1].wins + " " + pilot[2].wins)
     }
 
-
-    let aux = [pilot[0], pilot[1], pilot[2]];
-    aux.sort((a, b) => b.wins - a.wins);
-    // console.log(aux)
-        if(aux[0] == pilot[0].wins){
-            if(aux[1] == pilot[1].wins){
-                pilot[0].ptns += ptns[0]
-                pilot[1].ptns += ptns[1]
-                pilot[2].ptns += ptns[2]
-            } else  if(aux[2] == pilot[1].wins){
-                pilot[0].ptns += ptns[0]
-                pilot[2].ptns += ptns[1]
-                pilot[1].ptns += ptns[2]
-            }
+    if( pilot[0].wins > pilot[1].wins && pilot[0].wins > pilot[2].wins){
+        if(pilot[1].wins > pilot[2].wins){
+            pilot[0].ptns += ptns[0]
+            pilot[1].ptns += ptns[1]
+            pilot[2].ptns += ptns[2]
+        } else{
+            pilot[0].ptns += ptns[0]
+            pilot[2].ptns += ptns[1]
+            pilot[1].ptns += ptns[2]
         }
-
-    // if( pilot[0].wins > pilot[1].wins && pilot[0].wins > pilot[2].wins){
-    //     if(pilot[1].wins > pilot[2].wins){
-    //         pilot[0].ptns += ptns[0]
-    //         pilot[1].ptns += ptns[1]
-    //         pilot[2].ptns += ptns[2]
-    //     } else{
-    //         pilot[0].ptns += ptns[0]
-    //         pilot[2].ptns += ptns[1]
-    //         pilot[1].ptns += ptns[2]
-    //     }
-    // }
-    // else if( pilot[1].wins > pilot[0].wins && pilot[1].wins > pilot[2].wins){
-    //     if(pilot[0].wins > pilot[2].wins){
-    //         pilot[1].ptns += ptns[0]
-    //         pilot[0].ptns += ptns[1]
-    //         pilot[2].ptns += ptns[2]
-    //     } else{
-    //         pilot[1].ptns += ptns[0]
-    //         pilot[2].ptns += ptns[1]
-    //         pilot[0].ptns += ptns[2]
-    //     }
-    // } 
-    // else if( pilot[2].wins > pilot[0].wins && pilot[2].wins > pilot[1].wins){
-    //     if(pilot[0].wins > pilot[1].wins){
-    //         pilot[2].ptns += ptns[0]
-    //         pilot[0].ptns += ptns[1]
-    //         pilot[1].ptns += ptns[2]
-    //     } else{
-    //         pilot[2].ptns += ptns[0]
-    //         pilot[1].ptns += ptns[1]
-    //         pilot[0].ptns += ptns[2]
-    //     }
-    // }
+    }
+    else if( pilot[1].wins > pilot[0].wins && pilot[1].wins > pilot[2].wins){
+        if(pilot[0].wins > pilot[2].wins){
+            pilot[1].ptns += ptns[0]
+            pilot[0].ptns += ptns[1]
+            pilot[2].ptns += ptns[2]
+        } else{
+            pilot[1].ptns += ptns[0]
+            pilot[2].ptns += ptns[1]
+            pilot[0].ptns += ptns[2]
+        }
+    } 
+    else if( pilot[2].wins > pilot[0].wins && pilot[2].wins > pilot[1].wins){
+        if(pilot[0].wins > pilot[1].wins){
+            pilot[2].ptns += ptns[0]
+            pilot[0].ptns += ptns[1]
+            pilot[1].ptns += ptns[2]
+        } else{
+            pilot[2].ptns += ptns[0]
+            pilot[1].ptns += ptns[1]
+            pilot[0].ptns += ptns[2]
+        }
+    }
     console.log(pilot)
     pilot[0].wins = 0
     pilot[1].wins = 0
