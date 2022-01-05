@@ -146,3 +146,10 @@ function btnRuns(runs){
     pilot[2].wins = 0
 }
 btnRuns(3)
+btnRuns(3)
+btnRuns(3)
+btnRuns(3)
+btnRuns(3)
+btnRuns(3)
+btnRuns(3)
+btnRuns(3)
