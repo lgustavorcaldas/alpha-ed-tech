@@ -1,6 +1,8 @@
 :root{
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
     --text-primary: #ffffff;
     --text-secondary: #000000;
     --bg-primary: #000749;
@@ -12,7 +14,7 @@ body{
     margin: 0;
     padding: 0;
 }
-.parallax {
+.parallax1 {
     background-image: url("midia/top.jpg") ;
     min-height: 500px;  
     background-attachment: fixed;
@@ -32,12 +34,13 @@ body::-webkit-scrollbar-thumb{
 .bloco{
     background-color: var(--bg-primary);
     color: var(--text-primary);
+
 }
 div{
     margin: 0;
     padding: 0;
 }
-.segundo {
+.parallax2 {
     background-image: url("midia/segundo.jpg") ;
     min-height: 500px;  
     background-attachment: fixed;
