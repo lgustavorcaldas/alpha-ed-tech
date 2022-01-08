@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1052</title>
+</head>
+<body>
+    <span>Read an integer number between 1 and 12, including. Corresponding to this number, you must print the month of the year, in english, with the first letter in uppercase.</span>
+
+    <h2>Input</h2>
+    <span>The input contains only an integer number.</span>
+        
+    <h2>Output</h2>
+    <span>Print the name of the month according to the input number, with the first letter in uppercase.</span>
+
+    <br /><br />
+    <h3>Paste Number here.</h3>
+
+    <input type="number" name="num" id="num">
+    <input type="button" onclick="func()" name="btn" id="btn" value="send">
+    
+    <p id="demo"></p>
+
+    <script>
+
+        function func(){
+            let month = document.getElementById("num").value;
+
+            if( month == 1){
+                result = "January";
+            } else if( month == 2){
+                result = "February";
+            } else if( month == 3){
+                result = "March";
+            } else if( month == 4){
+                result = "April";
+            } else if( month == 5){
+                result = "May";
+            } else if( month == 6){
+                result = "June";
+            } else if( month == 7){
+                result = "July";
+            } else if( month == 8){
+                result = "August";
+            } else if( month == 9){
+                result = "September";
+            } else if( month == 10){
+                result = "October";
+            } else if( month ==  11){
+                result = "November";
+            } else if( month == 12){
+                result = "December";
+            } else{
+                result = "ERRO, not a number between 1 and 12!";
+            }
+
+            document.getElementById("demo").innerHTML = result;
+
+        }
+
+    </script>
+
+</body>
+</html>

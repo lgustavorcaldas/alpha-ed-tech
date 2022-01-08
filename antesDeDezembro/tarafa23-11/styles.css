@@ -1,0 +1,14 @@
+:root{
+    background-color: lightslategray;
+}
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+body{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+    header p{
+        font-family: 'Comforter', cursive;
+        font-size: 48px;
+    }

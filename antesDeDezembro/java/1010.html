@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1010</title>
+</head>
+<body>
+    
+    <input type="number" id="code-one" placeholder="code-one">
+    <input type="number" id="unit-one" placeholder="unit-one">
+    <input type="number" id="value-one" placeholder="value-one"><br /><br />
+    
+
+    <input type="number" id="code-two" placeholder="code-two">
+    <input type="number" id="unit-two" placeholder="unit-two">
+    <input type="number" id="value-two" placeholder="value-two"><br /><br />
+
+    <p id="show"></p>
+    <p id="show1"></p>
+
+    <input type="button" onclick="func()" value="send">
+
+<script>
+    
+    function func(){
+        let codex = document.getElementById("code-one").value;
+        let unitx = document.getElementById("unit-one").value;
+        let valuex = document.getElementById("value-one").value;
+
+        let y = parseFloat(unitx) * parseFloat(valuex);
+
+        document.getElementById("show").innerHTML = "VALOR A PAGAR: R$ " + y;
+
+        let codey = document.getElementById("code-two").value;
+        let unity = document.getElementById("unit-two").value;
+        let valuey = document.getElementById("value-two").value;
+
+        let w = parseFloat(unity) * parseFloat(valuey);
+
+        document.getElementById("show1").innerHTML = "VALOR A PAGAR: R$ " + w;
+    }
+    
+</script>
+
+</body>
+</html>

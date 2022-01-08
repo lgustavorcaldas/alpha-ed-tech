@@ -1,0 +1,24 @@
+:root{
+    background-color: beige;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+p{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    width: 560px;
+}
+div{
+    margin: 5px 0 0 30px;
+}
+.board{
+    height: 350px;
+    width: 1210px;
+    background-color: black;
+    margin: 50px auto;
+    border: 10px solid burlywood;
+    border-radius: 5px;
+    display: flex;
+}

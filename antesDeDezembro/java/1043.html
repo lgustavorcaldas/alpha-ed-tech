@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1043</title>
+</head>
+<body>
+    <p>Read three point floating values (A, B and C) and verify if is possible to make a triangle with them. If it is possible, calculate the perimeter of the triangle and print the message:</p>
+    <p>Perimetro = XX.X</p>
+    <p>If it is not possible, calculate the area of the trapezium which basis A and B and C as height, and print the message:</p>
+    <p>Area = XX.X</p>
+    <h2>Input</h2>
+    <span>The input file has tree floating point numbers.</span>
+    <h2>Output</h2>
+    <span>Print the result with one digit after the decimal point.</span><br />
+
+    <input type="number" id="a" name="a" placeholder="A">
+    <input type="number" id="b" name="b" placeholder="B">
+    <input type="number" id="c" name="c" placeholder="C">
+    <input type="button" id="btn" value="send" onclick="func()"><br />
+
+    <p id="demo"></p>
+
+    <script>
+        function func(){
+            let pa = parseFloat(document.getElementById("a").value);
+            let pb = document.getElementById("b").value;
+            let pc = document.getElementById("c").value;
+            
+
+            let somaab = pa + parseFloat(pb);
+            let somaac = pa + parseFloat(pc);
+            let somabc = parseFloat(pb) + parseFloat(pc);
+
+            if ( pa < somabc && pb < somaac && pc < somaab){
+                result = "Perimetro = " + (parseFloat(pa) + parseFloat(pb) + parseFloat(pc));
+            } else{
+                result = "Area = " + ((parseFloat(somaab) / 2) * parseFloat(pc));
+            }
+
+            document.getElementById("demo").innerHTML = result;
+
+
+        }
+        
+
+    </script>
+
+</body>
+</html>

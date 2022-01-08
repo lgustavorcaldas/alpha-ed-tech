@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1011</title>
+</head>
+<body>
+    <h1>Volume of a sphere</h1>
+    <input type="number" id="R" name="radius" placeholder="radius">
+
+    <p>Volume = <span id="show"></span></p>
+    <input type="button" onclick="func()" value="result"> 
+
+    <script>
+
+        function func(){
+
+            let radius = document.getElementById("R").value;
+
+            let final = (4/3.0) * Math.PI * radius ** 3;
+
+            document.getElementById("show").innerHTML = final;
+
+        }
+
+    </script>
+</body>
+</html>

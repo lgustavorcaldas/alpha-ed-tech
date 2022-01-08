@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Sanduba do Jorge</h1>
+        </header>
+        <div id="one">
+            <section>
+                <label for="input-name">Nome*</label><br />
+                <input type="text" id="input-name" placeholder="Digite aqui seu nome" title="Preencha esse campo com o seu nome" required />
+                <br />
+                <br />
+                <label for="input-email">E-mail*</label><br />
+                <input type="text" id="input-email" placeholder="Digite aqui seu E-mail" title="Preencha esse campo com o seu e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br />
+            </section>
+            <section>
+                <label for="input-date">Data de nascimento*</label><br />
+                <input type="date" id="input-date" name="date" title="Sua data de nascimento" required />
+                <br />
+                <br />
+                <label for="input-sexo">Qual seu gênero*?</label><br />
+                <input type="text" id="input-sexo" name="sexo" placeholder="Digite aqui o seu sexo" title="Preencha esse campo com o seu sexo" required />
+            </section>
+        </div>
+        <section>
+            Que nota você daria para nosso sanduba*:<br /><i>Ruim! :c</i>
+            <input type="range" min="0" max="100" id="input-range" name="range" title="Eu estou com fome e você?" /><i>Topperson! :D</i>
+        </section>
+        <section>
+            <label for="input-coment">Alguma dica ou comentario?</label><br />
+            <input type="text" id="input-coment" name="coment" placeholder="Digite aqui seu comentario" title="Preencha esse campo com o seu nome" required />
+        </section>
+        <input type="button" id="send" value="Send" onclick="{func()}">
+    </main>
+    <br />
+    <br />
+    <input type="button" value="Show" id="show" onclick="{func1()}">
+    <p id="show-name"></p>
+    <p id="show-email"></p>
+    <p id="show-date"></p>
+    <p id="show-sexo"></p>
+    <p id="show-range"></p>
+    <p id="show-coment"></p>
+    
+
+
+    <script src="javascript.js"></script>
+</body>
+</html>

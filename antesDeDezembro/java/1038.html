@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1038</title>
+</head>
+<body>
+    <p>Using the following table, write a program that reads a code and the amount of an item. After, print the value to pay. This is a very simple program with the only intention of practice of selection commands.</p>
+    <div>
+        <ul>
+            <ui>Code</ui>
+            <ui>Specification</ui>
+            <ui>Price</ui>
+        </ul>
+        <ul>
+            <ui>1</ui>
+            <ui>Cachorro Quente</ui>
+            <ui>R$ 4.00</ui>
+        </ul>
+        <ul>
+            <ui>2</ui>
+            <ui>X-Salada</ui>
+            <ui>R$ 4.50</ui>
+        </ul>
+        <ul>
+            <ui>3</ui>
+            <ui>X-Bacon</ui>
+            <ui>R$ 5.00</ui>
+        </ul>
+        <ul>
+            <ui>4</ui>
+            <ui>Torrada Simples</ui>
+            <ui>R$ 2.00</ui>
+        </ul>
+        <ul>
+            <ui>5</ui>
+            <ui>Refrigerante</ui>
+            <ui>R$ 1.50</ui>
+        </ul>
+    </div>
+    <h2>Input</h2>
+    <p>The input file contains two integer numbers X and Y. X is the product code and Y is the quantity of this item according to the above table.</p>
+    <h2>Output</h2>
+    <p>The output must be a message "Total: R$ " followed by the total value to be paid, with 2 digits after the decimal point.</p>
+
+    <input type="number" id="code" name="code" placeholder="code">
+    <input type="number" id="quantity" name="quantity" placeholder="quantity">
+    <input type="button" id="btn" value="send" onclick="func()">
+    <p>Value to be paid.</p>
+    <p id="demo"></p>
+
+
+    <script>
+        function func(){
+            let item = document.getElementById("code").value;
+            let quant = document.getElementById("quantity").value;
+
+            if(item == 1){
+                price = 4;
+            } else if( item == 2){
+                price = 4.5;
+            } else if( item == 3){
+                price = 5;
+            } else if( item == 4){
+                price = 2;
+            } else if( item == 5){
+                price = 1.5;
+            } else{
+                price = "ERRO";
+            }
+
+            let result = parseFloat(price) * quant;
+
+            document.getElementById("demo").innerHTML = "Total: R$ " + result;
+
+        }
+        
+    </script>
+</body>
+</html>

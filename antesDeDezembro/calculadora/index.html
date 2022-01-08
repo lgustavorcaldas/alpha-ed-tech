@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Calculadora GlassMorphismo" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:description" content="Brincando com glassmorphismo e javascript">
+    <meta property="og:url" content="https://lgustavorcaldas.github.io/alpha-ed-tech/calculadora/index.html" />
+    <meta property="og:image" content="https://user-images.githubusercontent.com/84547544/143350121-e5d0e077-db66-48c9-b50b-d56d3209f02e.png" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <main class="container">
+                <div class="form">
+                    <h2>Calculadora</h2>
+                    <form>
+                        <div class="btn-box">
+                            <div id="name">
+                                <span>One</span>
+                                <span>Sign</span>
+                                <span>Two</span>
+                                <span>Result</span>
+                            </div>
+                            <div class="btn-box-div">
+                                <div><span id="numb-one"></span></div>
+                                <span id="sign"></span>
+                                <div><span id="numb-two"></span></div>
+                                <span id="equal">=</span>
+                                <div><span id="numb-result"></span></div>
+                            </div>
+                            <div>
+                                <button type="button" onClick={showNumber(7)}><span>7</span></button>
+                                <button type="button" onClick={showNumber(8)}><span>8</span></button>
+                                <button type="button" onClick={showNumber(9)}><span>9</span></button>
+                                <button type="button" id="/" onClick={operation(id)}><span>/</span></button>
+                            </div>
+                            <div>
+                                <button type="button" onClick={showNumber(4)}><span>4</span></button>
+                                <button type="button" onClick={showNumber(5)}><span>5</span></button>
+                                <button type="button" onClick={showNumber(6)}><span>6</span></button>
+                                <button type="button" id="*" onClick={operation(id)}><span>x</span></button>
+                            </div>
+                            <div>
+                                <button type="button" onClick={showNumber(1)}><span>1</span></button>
+                                <button type="button" onClick={showNumber(2)}><span>2</span></button>
+                                <button type="button" onClick={showNumber(3)}><span>3</span></button>
+                                <button type="button" id="-" onClick={operation(id)}><span>-</span></button>
+                            </div>
+                            <div>
+                                <button type="button" onClick={trash()}><span style="font-size: 12px;">Limpar</span></button>
+                                <button type="button" onClick={showNumber(0)}><span>0</span></button>
+                                <button type="button" onClick={result()}><span style="font-size: 12px;">Enter</span></button>
+                                <button type="button" id="+" onClick={operation(id)}><span>+</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </section>
+
+<script src="javascript.js"></script>
+</body>
+</html>

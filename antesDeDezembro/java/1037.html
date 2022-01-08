@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1037</title>
+</head>
+<body>
+    <p>You must make a program that read a float-point number and print a message saying in which of following intervals the number belongs: [0,25] (25,50], (50,75], (75,100]. If the read number is less than zero or greather than 100, the program must print the message “Fora de intervalo” that means "Out of Interval".</p>
+    <p>The symbol '(' represents greather than. For example:
+        [0,25] indicates numbers between 0 and 25.0000, including both.
+        (25,50] indicates numbers greather than 25 (25.00001) up to 50.0000000.</p>
+    <h2>Input</h2>
+    <p>The input file contains a floating-point number.</p>
+    <h2>Output</h2>
+    <p>The output must be a message like following example.</p>
+
+    <input type="number" id="numb" name="numb" placeholder="Number">
+    <input type="button" id="btn" onclick="func()" value="btn" placeholder="send">
+    <p id="demo"></p>
+
+    <script>
+        function func(){
+            let x = document.getElementById("numb").value;
+
+            if ( x >= 0 && x <= 25){
+                result = "Intervalo [0,25]";
+            } else if( x >= 25.001 && x <= 50){
+                result = "Intervalo [25,50]";
+            } else if( x >= 50.001 && x <= 75){
+                result = "Intervalo [50,75]";
+            } else if( x >= 75.001 && x <= 100){
+                result = "Intervalo [75,100]";
+            } else{
+                result = "Fora de intervalo"
+            }
+
+            document.getElementById("demo").innerHTML = result;
+
+        }
+
+    </script>
+
+</body>
+</html>

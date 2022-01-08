@@ -1,0 +1,32 @@
+:root{
+    background-color: azure;
+}
+body{
+    margin: 10px auto;
+    padding: 0;  
+    display: flex;
+    justify-content: center;
+
+}
+button{
+    height: 75px;
+    width: 200px;
+    border: none;
+    font-weight: 600;
+    font-size: 32px;
+}
+    #btn-header{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #pedro, #juca, #edna{
+        width: 900px;
+        height: 200px;
+        margin: 10px;
+        background-color: black;
+        color: whitesmoke;
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
