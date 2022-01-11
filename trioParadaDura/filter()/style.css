@@ -1,0 +1,30 @@
+*{
+    background-color: whitesmoke;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+span{
+    font-size: 25px ;
+}
+select{
+    width: 180px;
+}
+input{
+    width: 180px;
+    margin: 15px;
+}
+table{
+    margin: ;
+    font-size: 20px ;
+}
+.titulo{
+    font-size: 30px;
+}
+#superior{
+    align-items: center;
+}
+

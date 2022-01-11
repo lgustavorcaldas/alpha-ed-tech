@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id = superior>
+        <span>Ordenar por</span>
+        <select name="dados" id="dados">
+            <option value="Data">Data</option>
+            <option value="Preco">Preço</option>
+        </select>
+        <span>o mês de </span>
+        <select name="selecao" id="selecao">
+            <option value="janeiro">Janeiro</option>
+            <option value="fevereiro">Fevereiro</option>
+            <option value="marco">Março</option>
+            <option value="abril">Abril</option>
+        </select>
+        </br>
+        <input type="button" value="Ordenar Crescente" onclick="ordenarCrescente()">
+        <input type="button" value="Ordenar Decrescente" onclick="ordenarDecrescente()">
+    </div>
+
+    <table>
+        <tr>
+            <td class = "titulo">Ordenação</td>
+        </tr>
+        <tr id="mostrar">
+            <td>Data</td>
+        </tr>
+    </table>
+  
+
+
+    <script src="magic.js"></script>
+</body>
+</html>
