@@ -1,0 +1,25 @@
+const ramdomNumber = []
+let min = 1;
+let max = 60;
+const show = document.getElementById("show")
+const showAll = document.getElementById("showAll")
+
+function callBack(){
+    let num = Math.floor(Math.random() * (max - min + 1) + min);
+
+    let verificarNum = ramdomNumber.indexOf(num);
+
+    if(verificarNum == -1){
+        ramdomNumber.push(num)
+        show.innerHTML = num
+    } else{
+        callBack()
+    }
+
+    if(ramdomNumber.length == 6){
+        clearInterval(intervalo)
+        showAll.innerHTML = ramdomNumber
+    }
+}
+
+let intervalo = setInterval(callBack, 1000)
